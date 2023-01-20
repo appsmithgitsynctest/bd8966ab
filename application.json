@@ -15,6 +15,10 @@
     {
       "id": "ApiCalls_1 Copy",
       "isDefault": false
+    },
+    {
+      "id": "Child_Page",
+      "isDefault": false
     }
   ],
   "viewMode": false,
