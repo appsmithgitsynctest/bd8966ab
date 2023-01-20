@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "InsertQuery",
+    "name": "DeleteQuery",
     "datasource": {
       "name": "8833f67f",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "crudpage_1 Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO public.\"configs\" (\n\t\"id\",\n\t\"configName\",\n\t\"configJson\",\n\t\"configVersion\",\n\t\"updatedAt\",\n\t\"updatedBy\")\nVALUES (\n\t'{{insert_form.formData.id}}',\n\t'{{insert_form.formData.configName}}',\n\t'{{insert_form.formData.configJson}}',\n\t'{{insert_form.formData.configVersion}}',\n\t'{{insert_form.formData.updatedAt}}',\n\t'{{insert_form.formData.updatedBy}}');",
+      "body": "DELETE FROM public.\"configs\"\n  WHERE \"id\" = {{data_table.triggeredRow.id}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -31,19 +31,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "insert_form.formData.configJson",
-      "insert_form.formData.configName",
-      "insert_form.formData.configVersion",
-      "insert_form.formData.id",
-      "insert_form.formData.updatedAt",
-      "insert_form.formData.updatedBy"
+      "data_table.triggeredRow.id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_InsertQuery",
+  "id": "crudpage_1 Copy_DeleteQuery",
   "deleted": false,
-  "gitSyncId": "63ca5a0f4f5d486cdb74bc78_63ca5a224f5d486cdb74bc80"
+  "gitSyncId": "63ca5a0f4f5d486cdb74bc78_63ca5a464f5d486cdb74bc8a"
 }

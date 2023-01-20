@@ -1,8 +1,20 @@
 {
   "pages": [
     {
-      "id": "Page1",
+      "id": "crudpage_1",
       "isDefault": true
+    },
+    {
+      "id": "crudpage_1 Copy",
+      "isDefault": false
+    },
+    {
+      "id": "ApiCalls_1",
+      "isDefault": false
+    },
+    {
+      "id": "ApiCalls_1 Copy",
+      "isDefault": false
     }
   ],
   "viewMode": false,
